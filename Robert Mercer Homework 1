@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+plt.rcdefaults()
+import numpy as np
+from numpy import sin, cos, pi
+
+a = np.linspace(0,6*pi)
+sina = sin(a)
+plt.plot(a, sina,'r--', label = 'Sine Wave')
+cosa = cos(a)
+plt.plot(a,cosa, 'b-',label = 'Cosine Wave')
+plt.title('Sine vs Cosine')
+marks = ('0','pi', '2pi', '3pi', '4pi', '5pi', '6pi')
+xpos = np.arange(len(marks))
+plt.xticks(xpos*pi, marks)
+plt.ylim(-2,2)
+plt.legend()
+plt.grid()
+plt.show()
